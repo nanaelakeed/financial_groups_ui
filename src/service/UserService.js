@@ -11,16 +11,12 @@ export class UserService {
         return axios.get(USER_BASE_URL);
     }
 
-    addUser = () => {
-        const userToBeSaved = {
-            "name":"Afnan Elakeed",
-            "city":"Benha",
-            "email":"afnan@gmail.com",
-            "password":"elakeed",
-            "salary":150000
-        }
-
+    addUser = (userToBeSaved) => {
         return axios.post(USER_BASE_URL, userToBeSaved);
+    }
+
+    deleteUser=(id)=>{
+        return axios.delete(USER_BASE_URL+"/"+id);
     }
 
 

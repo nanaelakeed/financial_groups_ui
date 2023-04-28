@@ -18,10 +18,10 @@ export class GroupsService {
     addGroup = () => {
         const newGroup = {
             "price": 15000,
-            "num_members": 10,
+            "numMembers": 10,
             "creator": "Admin",
-            "st_date": "2022/6/2",
-            "end_date": "2023/7/2"
+            "stDate": "2022-6-2",
+            "endDate": "2023-7-2"
         }
         return axios.post(BaseURL, newGroup);
     }
